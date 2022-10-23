@@ -1,2 +1,14 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+	import supabase from '$lib/db.js';
+
+	async function signUp() {
+		const { user, error } = await supabase.auth.signUp({
+			email: 'someone@email.com',
+			password: 'NBPHovLbrdGEJjXWaqeS'
+		});
+
+		console.log(user, error);
+	}
+</script>
+
+<button on:click={signUp}>Sign Up</button>
