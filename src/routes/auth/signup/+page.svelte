@@ -2,8 +2,13 @@
 	import supabase from '$lib/db';
 
 	let email, password;
+
 	async function signUp() {
-		const { user, session, error } = await supabase.auth.signUp({
+		const {
+			user,
+			session: sesh,
+			error
+		} = await supabase.auth.signUp({
 			email,
 			password
 		});
@@ -21,4 +26,4 @@
 	<button class="p-2 bg-green-400 rounded block mx-auto">Sign Up</button>
 </form>
 
-<a href="/signin">Already have an account?</a>
+<a href="/auth/login">Already have an account?</a>
