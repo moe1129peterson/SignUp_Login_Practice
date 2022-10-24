@@ -3,23 +3,26 @@
 
 	let email, password;
 
-	async function signIn() {
-		const { user, session, error } = await supabase.auth.signIn({
+	async function signUp() {
+		const {
+			user,
+			session: sesh,
+			error
+		} = await supabase.auth.signUp({
 			email,
 			password
 		});
 
 		if (error) alert(error.message);
-		console.log(user, session, error);
 	}
 </script>
 
-<form on:submit|preventDefault={signIn}>
+<form on:submit|preventDefault={signUp}>
 	<label for="email">Email</label>
 	<input class="blocl p-2 rounded" id="email" bind:value={email} type="email" />
 	<label for="password">Password</label>
 	<input class="blocl p-2 rounded" id="password" bind:value={password} type="password" />
-	<button class="p-2 bg-green-400 rounded block mx-auto">Sign In</button>
+	<button class="p-2 bg-green-400 rounded block mx-auto">Sign Up</button>
 </form>
 
-<a href="/auth/signup">Need to create a new account?</a>
+<a href="/signin">Already have an account?</a>
