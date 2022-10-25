@@ -3,12 +3,12 @@
 
 	let email, password;
 
-	async function signInWithPassword() {
+	async function signUp() {
 		const {
 			user,
 			session: sesh,
 			error
-		} = await supabase.auth.signInWithPassword({
+		} = await supabase.auth.signUp({
 			email,
 			password
 		});
@@ -31,12 +31,12 @@
 			<h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">
 				Welcome to UVU 3790!
 			</h1>
-			<p class="lg:w-2/3 mx-auto leading-relaxed text-base">Here is Sign In Page</p>
+			<p class="lg:w-2/3 mx-auto leading-relaxed text-base">Here is Sign Up Page</p>
 		</div>
 		<div
 			class="flex lg:w-2/3 w-full sm:flex-row flex-col mx-auto px-8 sm:space-x-4 sm:space-y-0 space-y-4 sm:px-0 items-end"
 		>
-			<form on:submit|preventDefault={signInWithPassword}>
+			<form on:submit|preventDefault={signUp}>
 				<label for="full-name" class="leading-7 text-sm text-gray-600">Email</label>
 				<input
 					type="email"
@@ -45,7 +45,7 @@
 					name="email"
 					class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-pink-500 focus:bg-transparent focus:ring-2 focus:ring-pink-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
 				/>
-				<label for="email" class="leading-7 text-sm text-gray-600">Pasrd</label>
+				<label for="email" class="leading-7 text-sm text-gray-600">Password</label>
 				<input
 					type="password"
 					id="password"
@@ -55,10 +55,10 @@
 				/>
 				<button
 					class="text-white bg-pink-500 border-0 py-2 px-8 focus:outline-none hover:bg-pink-600 rounded text-lg"
-					>Sign In</button
+					>Sign Up</button
 				>
 			</form>
-			<a href="/">Do you need to create an account?</a>
+			<a href="/signin">Do you have an account?</a>
 		</div>
 	</div>
 </section>
