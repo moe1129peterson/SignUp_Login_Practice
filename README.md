@@ -8,7 +8,7 @@
 
 <h1 align="center">Repo</h1>
 <p align="center">Github Repo: https://github.com/moe1129peterson/SignUp_Login_Practice </p>
-<p align="center">Vercel App: https://svelte-3790.vercel.app/</p>
+<p align="center">Vercel App: https://svelte-app-3790.vercel.app/</p>
 
 ## create-svelte
 
