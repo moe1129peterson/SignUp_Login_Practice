@@ -7,18 +7,18 @@
 
 	let email, password;
 
-	async function signInWithPassword() {
-		const {
-			user,
-			session: sesh,
-			error
-		} = await supabase.auth.signInWithPassword({
-			email,
-			password
-		});
+	// async function signInWithPassword() {
+	// 	const {
+	// 		user,
+	// 		session: sesh,
+	// 		error
+	// 	} = await supabase.auth.signInWithPassword({
+	// 		email,
+	// 		password
+	// 	});
 
-		// if (error) alert(error.message);
-	}
+	// if (error) alert(error.message);
+	// }
 </script>
 
 <!-- <form on:submit|preventDefault={signUp}>
@@ -40,7 +40,7 @@
 		<div
 			class="flex lg:w-2/3 w-full sm:flex-row flex-col mx-auto px-8 sm:space-x-4 sm:space-y-0 space-y-4 sm:px-0 items-end"
 		>
-			<form on:submit|preventDefault={signInWithPassword}>
+			<form on:submit|preventDefault={navigate}>
 				<label for="full-name" class="leading-7 text-sm text-gray-600">Email</label>
 				<input
 					type="email"
