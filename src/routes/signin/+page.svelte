@@ -17,7 +17,7 @@
 			password
 		});
 
-		if (error) alert(error.message);
+		// if (error) alert(error.message);
 	}
 </script>
 
